@@ -6,7 +6,7 @@ const BankAccountForm = () => {
 
   const onFinish = async (values) => {
     try {
-      const response = await fetch('http://localhost:9090/bank-accounts', 
+      const response = await fetch('https://bankdetailsvalidation.onrender.com/bank-accounts', 
       {
         method: 'POST',
         headers: {
