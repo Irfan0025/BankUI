@@ -1,24 +1,35 @@
 import React from 'react';
 import { Form, Input, Button, Modal } from 'antd';
-import './BankAccountForm.css'; // Import CSS file for styling
 
 const BankAccountForm = () => {
   const [form] = Form.useForm();
 
-  const apiUrl = 'https://ifsc.razorpay.com/';
-
   const onFinish = async (values) => {
     try {
-      const response = await fetch(apiUrl + values.ifsc, {
-        method: 'GET',
+      const response = await fetch('https://bankdetailsvalidation.onrender.com/bank-accounts', {
+        method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
+        body: JSON.stringify(values),
       });
 
-      console.log(response);
-    } catch (e) {
-      console.log(e);
+      if (response.ok) {
+        const data = await response.json();
+        showModal(data);
+        form.resetFields();
+      } else if (response.status === 400) {
+        const error = await response.text();
+        console.log('Validation Error:', error);
+        alert(error);
+      } else {
+        const error = await response.text();
+        console.log('Error:', error);
+        alert(error);
+      }
+    } catch (error) {
+      console.log('Request failed:', error);
+      alert('Request failed. Please try again.');
     }
   };
 
