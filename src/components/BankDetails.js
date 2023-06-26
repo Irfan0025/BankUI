@@ -6,7 +6,8 @@ const BankAccountForm = () => {
 
   const onFinish = async (values) => {
     try {
-      const response = await fetch('https://bankdetailsvalidation.onrender.com/bank-accounts', {
+      const response = await fetch('http://localhost:9090/bank-accounts', 
+      {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -78,7 +79,7 @@ const BankAccountForm = () => {
 
         <Form.Item
           label="PAN Number"
-          name="panNumber"
+          name="pan"
           rules={[
             { required: true, message: 'Please enter PAN Number' },
             { pattern: /^([A-Z]){5}([0-9]){4}([A-Z]){1}?$/, message: 'Invalid PAN Number' },
@@ -89,7 +90,7 @@ const BankAccountForm = () => {
 
         <Form.Item
           label="Aadhar Number"
-          name="aadharNumber"
+          name="aadhar"
           rules={[
             { required: true, message: 'Please enter Aadhar Number' },
             { pattern: /^\d{4}\s\d{4}\s\d{4}$/, message: 'Invalid Aadhar Number' },
