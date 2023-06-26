@@ -80,14 +80,16 @@ const BankAccountForm = () => {
                 name="name"
                 rules={[{ required: true, message: "Please enter your name" }]}
               >
-                <span className="icon bank-account-form-icon">
-                  <BankOutlined />
-                </span>
-                <Input
-                  placeholder="Enter Name"
-                  className="input-bar"
-                  size="small"
-                />
+                <div>
+                  <span className="icon bank-account-form-icon">
+                    <BankOutlined />
+                  </span>
+                  <Input
+                    placeholder="Enter Name"
+                    className="input-bar"
+                    size="small"
+                  />
+                </div>
               </Form.Item>
 
               <Form.Item
@@ -99,14 +101,16 @@ const BankAccountForm = () => {
                 name="ifsc"
                 rules={[{ required: true, message: "Please enter IFSC code" }]}
               >
-                <span className="icon bank-account-form-icon">
-                  <BankOutlined />
-                </span>
-                <Input
-                  placeholder="Enter IFSC code"
-                  className="input-bar"
-                  size="small"
-                />
+                <div>
+                  <span className="icon bank-account-form-icon">
+                    <BankOutlined />
+                  </span>
+                  <Input
+                    placeholder="Enter IFSC code"
+                    className="input-bar"
+                    size="small"
+                  />
+                </div>
               </Form.Item>
 
               <Form.Item
@@ -120,14 +124,16 @@ const BankAccountForm = () => {
                   { required: true, message: "Please enter account number" },
                 ]}
               >
-                <span className="icon bank-account-form-icon">
-                  <BankOutlined />
-                </span>
-                <Input
-                  placeholder="Enter Account Number"
-                  className="input-bar"
-                  size="small"
-                />
+                <div>
+                  <span className="icon bank-account-form-icon">
+                    <BankOutlined />
+                  </span>
+                  <Input
+                    placeholder="Enter Account Number"
+                    className="input-bar"
+                    size="small"
+                  />
+                </div>
               </Form.Item>
 
               <Form.Item
@@ -145,14 +151,16 @@ const BankAccountForm = () => {
                   },
                 ]}
               >
-                <span className="icon bank-account-form-icon">
-                  <BankOutlined />
-                </span>
-                <Input
-                  placeholder="Enter PAN Number (example: DTHPG3189P)"
-                  className="input-bar"
-                  size="small"
-                />
+                <div>
+                  <span className="icon bank-account-form-icon">
+                    <BankOutlined />
+                  </span>
+                  <Input
+                    placeholder="Enter PAN Number (example: DTHPG3189P)"
+                    className="input-bar"
+                    size="small"
+                  />
+                </div>
               </Form.Item>
 
               <Form.Item
@@ -170,14 +178,16 @@ const BankAccountForm = () => {
                   },
                 ]}
               >
-                <span className="icon bank-account-form-icon">
-                  <BankOutlined />
-                </span>
-                <Input
-                  placeholder="Enter Aadhar Number (example: 1234 5678 9012)"
-                  className="input-bar"
-                  size="small"
-                />
+                <div>
+                  <span className="icon bank-account-form-icon">
+                    <BankOutlined />
+                  </span>
+                  <Input
+                    placeholder="Enter Aadhar Number (example: 1234 5678 9012)"
+                    className="input-bar"
+                    size="small"
+                  />
+                </div>
               </Form.Item>
 
               <Form.Item>
